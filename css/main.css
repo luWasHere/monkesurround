@@ -613,12 +613,14 @@ section[id] {
   left: 0;
   display: none;
 }
+.temasContainer #gridYt #reproductor iframe[id] {
+  border: green 2px solid;
+}
 .temasContainer #gridYt #reproductor iframe:first-child {
   display: block;
 }
 .temasContainer #gridYt #reproductor iframe:target {
   display: block;
-  scroll-margin-top: 100px;
 }
 .temasContainer #gridYt a {
   border-radius: 12px;

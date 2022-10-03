@@ -421,12 +421,15 @@ section[id] {
                     left: 0;
                     display: none;
 
+                    &[id] {
+                        border: green 2px solid;
+                    }
+
                     &:first-child {
                         display: block;
                     }
                     &:target {
                         display: block;
-                        scroll-margin-top: 100px;
                     }
                 }
             }
