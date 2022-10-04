@@ -471,6 +471,7 @@ section[id] {
     #miembrosContainer {
         display: grid;
         grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto;
         justify-content: center;
         justify-items: center;
         gap: 15px;
@@ -494,6 +495,15 @@ section[id] {
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            grid-column: span 2;
+            width: 95%;
+            border-radius: 14px;
+            overflow: hidden;
+            margin: 0px 0px 40px 0px;
+            box-shadow: 0px 2px 17px -4px rgba(245,175,0,0.54);
+            // -webkit-box-shadow: 0px 2px 17px -4px rgba(245,175,0,0.54);
+            // -moz-box-shadow: 0px 2px 17px -4px rgba(245,175,0,0.54);
         }
         .insignia {
             filter: brightness(80%);
@@ -507,8 +517,8 @@ section[id] {
             &.beatmaker:hover:after {
                 content: "Beatmaker";
             }
-            &.artista:hover:after {
-                content: "Artista";
+            &.cantante:hover:after {
+                content: "Cantante";
             }
             &:after {
                 font-family: 'Saira Condensed', sans-serif;
@@ -536,16 +546,8 @@ section[id] {
             }
         }
         .miembroPrinc {
-            grid-column: span 2;
-            width: 95%;
-            border-radius: 14px;
-            overflow: hidden;
-            margin: 15px 0px 40px 0px;
-            box-shadow: 0px 2px 17px -4px rgba(245,175,0,0.54);
-            // -webkit-box-shadow: 0px 2px 17px -4px rgba(245,175,0,0.54);
-            // -moz-box-shadow: 0px 2px 17px -4px rgba(245,175,0,0.54);
 
-            &:nth-child(2), &:nth-child(5) {
+            &:nth-child(2), &:nth-child(5){
                 justify-self: start;  
             }
             &:nth-child(3) {
@@ -556,6 +558,7 @@ section[id] {
                 figcaption {
                     color: rgb(245, 0, 0);
                 }
+                grid-row: span 2;
             }
 
             figcaption {
@@ -601,6 +604,57 @@ section[id] {
                         width: 4em;
                     }
                 }
+            }
+        }
+        .miembroSec {
+            height: auto;
+
+            .imgArtista {
+                height: 60%;
+                width: 100%;
+                // outline: green solid 2px;
+                overflow: hidden;
+                position: relative;
+
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                    position: absolute;
+                    outline: yellow 2px solid;
+                }
+            }
+            .miembroInfo {
+                width: 100%;
+                height: 40%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                padding: 0px 2em;
+                margin: 0px;
+                text-align: center;
+                line-height: normal;
+                font-size: 1.1em;
+                color: #ddd;
+
+                figcaption {
+                    font-size: 2.5em;
+                    text-shadow: 0px 0px 12px rgba(0,0,0,1);
+                    margin: 10px 0px;
+                    padding: 0;
+                    justify-self: flex-start;
+                }
+                div {
+                    margin-top: 10px;
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-evenly;
+                }
+                img, a{
+                    width: 3em;
+                    height: 3em;
+                }
+
             }
         }
 
