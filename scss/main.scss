@@ -697,11 +697,12 @@ section[id] {
 
                 background-image: url("../img/miembros-textura.jpg");
                 background-position: center;
-                border-radius: 14px;
+                border-radius: 90px 90px 10px 10px;
 
                 img {
                     user-select: none;
                     width: 14em;
+                    padding: 15px;
                     filter: invert(1) brightness(80%);
                 }
                 span {
@@ -762,7 +763,6 @@ section[id] {
                 width: 90%; 
         }
     }
-
     /* termina responsive temas */
 
     
@@ -804,8 +804,20 @@ section[id] {
             width: 80%;
         }
     }
-
     /* termina responsive temas */
+
+
+    /* inicia responsive miembros */
+    #miembrosContainer {
+        width: 95%;
+        gap: 0px 15px;
+
+        .p {
+            margin: 0px 25px;
+        }
+    }
+
+    /* termina responsive miembros */
 }
 
 @media (max-width:660px) {
@@ -875,6 +887,34 @@ section[id] {
         }
     }
     /* termina responsive temas */
+
+
+    /* inicia responsive miembros */
+
+    #miembrosContainer {
+        width: 70%;
+
+        .miembrosRotulo {
+            width: 70%;
+        }
+        .p {
+            margin: 0px;
+            font-size: 1.3em;
+        }
+        .miembro {
+            grid-column: span 4;
+        }
+        #exmonkisContainer .exmonki {
+            img {
+                width: 9em;
+            }
+            span {
+                font-size: 1.4em;
+            }
+
+        }
+    }
+    /* termina responsive miembros */
 }
 
 @media (max-width:520px) {
@@ -903,6 +943,14 @@ section[id] {
         }
     }
     /* termina responsive temas */
+
+
+    /* inicia responsive miembros */
+
+    #miembrosContainer {
+        width: 85%;
+    }
+    /* termina responsive miembros */
 }
 
 
@@ -911,6 +959,58 @@ section[id] {
     .titleh1 {
         font-size: 2.5em;
     }
+}
+
+@media (max-width:430px) {
+
+    
+    /* inicia responsive miembros */
+    #miembrosContainer {
+
+        .miembroPrinc {
+            .miembroInfo{
+                div {
+                    img {
+                        width: 2.4em;
+                    }
+                }
+            }
+        }
+        .miembroSec {
+            .miembroInfo {
+                div {
+                    .redsocialBtn {
+                        width: 2.4em;
+                        height: 2.4em;
+                        img {
+                            width: 2.4em;
+                            height: 2.4em;
+                        }
+                    }
+                    .insignia {
+                        img {
+                            width: 2.4em;
+                            height: 2.4em;
+                        }
+                    }
+                }
+            }
+        }
+        #exmonkisContainer {
+            .exmonki {
+                padding: 10px 10px;
+
+                img {
+                    width: 7em;
+                }
+                span {
+                    font-size: 1.2em;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+    /* termina responsive miembros */
 }
 
 @media (max-width:340px) {
@@ -949,6 +1049,36 @@ section[id] {
         }
     }
     /* termina responsive contacto */
+
+
+    /* inicia responsive miembros */
+    #miembrosContainer {
+
+        .p {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        #exmonkisContainer {
+            width: 100%;
+
+            .exmonki {
+                padding: 8px 8px;
+                margin: 10px 10px;
+                max-width: 100px;
+
+                img {
+                    width: 6em;
+                }
+                span {
+                    font-size: 1.1em;
+                    margin-top: 5px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    /* termina responsive miembros */
 }
 
 @media (max-width:290px) {
@@ -981,4 +1111,10 @@ section[id] {
         }
     }
     /* termina responsive contacto */
+
+        /* inicia responsive miembros */
+        #miembrosContainer {
+            width: 95%;
+        }
+        /* termina responsive miembros */
 }

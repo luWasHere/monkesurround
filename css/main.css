@@ -866,7 +866,7 @@ section[id] {
   outline: rgba(204, 204, 204, 0.082) solid 3px;
   background-image: url("../img/miembros-textura.jpg");
   background-position: center;
-  border-radius: 14px;
+  border-radius: 90px 90px 10px 10px;
 }
 #miembrosContainer #exmonkisContainer .exmonki img {
   -webkit-user-select: none;
@@ -874,6 +874,7 @@ section[id] {
       -ms-user-select: none;
           user-select: none;
   width: 14em;
+  padding: 15px;
   filter: invert(1) brightness(80%);
 }
 #miembrosContainer #exmonkisContainer .exmonki span {
@@ -936,6 +937,15 @@ section[id] {
     width: 80%;
   }
   /* termina responsive temas */
+  /* inicia responsive miembros */
+  #miembrosContainer {
+    width: 95%;
+    gap: 0px 15px;
+  }
+  #miembrosContainer .p {
+    margin: 0px 25px;
+  }
+  /* termina responsive miembros */
 }
 @media (max-width: 660px) {
   .titleh1 {
@@ -986,6 +996,27 @@ section[id] {
     margin-bottom: 15px;
   }
   /* termina responsive temas */
+  /* inicia responsive miembros */
+  #miembrosContainer {
+    width: 70%;
+  }
+  #miembrosContainer .miembrosRotulo {
+    width: 70%;
+  }
+  #miembrosContainer .p {
+    margin: 0px;
+    font-size: 1.3em;
+  }
+  #miembrosContainer .miembro {
+    grid-column: span 4;
+  }
+  #miembrosContainer #exmonkisContainer .exmonki img {
+    width: 9em;
+  }
+  #miembrosContainer #exmonkisContainer .exmonki span {
+    font-size: 1.4em;
+  }
+  /* termina responsive miembros */
 }
 @media (max-width: 520px) {
   /* inicia responsive temas */
@@ -1005,11 +1036,45 @@ section[id] {
     margin-bottom: 10px;
   }
   /* termina responsive temas */
+  /* inicia responsive miembros */
+  #miembrosContainer {
+    width: 85%;
+  }
+  /* termina responsive miembros */
 }
 @media (max-width: 460px) {
   .titleh1 {
     font-size: 2.5em;
   }
+}
+@media (max-width: 430px) {
+  /* inicia responsive miembros */
+  #miembrosContainer .miembroPrinc .miembroInfo div img {
+    width: 2.4em;
+  }
+  #miembrosContainer .miembroSec .miembroInfo div .redsocialBtn {
+    width: 2.4em;
+    height: 2.4em;
+  }
+  #miembrosContainer .miembroSec .miembroInfo div .redsocialBtn img {
+    width: 2.4em;
+    height: 2.4em;
+  }
+  #miembrosContainer .miembroSec .miembroInfo div .insignia img {
+    width: 2.4em;
+    height: 2.4em;
+  }
+  #miembrosContainer #exmonkisContainer .exmonki {
+    padding: 10px 10px;
+  }
+  #miembrosContainer #exmonkisContainer .exmonki img {
+    width: 7em;
+  }
+  #miembrosContainer #exmonkisContainer .exmonki span {
+    font-size: 1.2em;
+    margin-top: 5px;
+  }
+  /* termina responsive miembros */
 }
 @media (max-width: 340px) {
   .titleh1 {
@@ -1035,6 +1100,28 @@ section[id] {
     font-size: 1em;
   }
   /* termina responsive contacto */
+  /* inicia responsive miembros */
+  #miembrosContainer .p {
+    font-size: 1em;
+    margin-bottom: 15px;
+  }
+  #miembrosContainer #exmonkisContainer {
+    width: 100%;
+  }
+  #miembrosContainer #exmonkisContainer .exmonki {
+    padding: 8px 8px;
+    margin: 10px 10px;
+    max-width: 100px;
+  }
+  #miembrosContainer #exmonkisContainer .exmonki img {
+    width: 6em;
+  }
+  #miembrosContainer #exmonkisContainer .exmonki span {
+    font-size: 1.1em;
+    margin-top: 5px;
+    text-align: center;
+  }
+  /* termina responsive miembros */
 }
 @media (max-width: 290px) {
   .titleh1 {
@@ -1057,4 +1144,9 @@ section[id] {
     width: 100%;
   }
   /* termina responsive contacto */
+  /* inicia responsive miembros */
+  #miembrosContainer {
+    width: 95%;
+  }
+  /* termina responsive miembros */
 }/*# sourceMappingURL=main.css.map */
