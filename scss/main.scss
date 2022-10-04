@@ -501,12 +501,12 @@ section[id] {
             border-radius: 14px;
             overflow: hidden;
             margin: 0px 0px 40px 0px;
-            box-shadow: 0px 2px 17px -4px rgba(245,175,0,0.54);
-            // -webkit-box-shadow: 0px 2px 17px -4px rgba(245,175,0,0.54);
-            // -moz-box-shadow: 0px 2px 17px -4px rgba(245,175,0,0.54);
+            box-shadow: 0px 2px 17px -4px rgba(245,175,0,0.20);
+            // -webkit-box-shadow: 0px 2px 17px -4px rgba(245,175,0,0.20);
+            // -moz-box-shadow: 0px 2px 17px -4px rgba(245,175,0,0.20);
 
             &:nth-child(5) {
-                box-shadow: 0px 2px 17px -4px rgba(245, 0, 0, 0.54);
+                box-shadow: 0px 2px 17px -4px rgba(245, 0, 0, 0.20);
                 figcaption {
                     color: rgb(245, 0, 0);
                 }
@@ -516,19 +516,13 @@ section[id] {
                 grid-row: span 2;
             }
             &:nth-child(6){
-                box-shadow: 0px 2px 17px -4px rgba(0, 89, 255, 0.54);
+                box-shadow: 0px 2px 17px -4px rgba(0, 89, 255, 0.20);
                 figcaption {
                     color: rgb(33, 88, 189);
                 }
-                .imgArtista img {
-                    bottom: -120px;
-                }
             }
             &:nth-child(7){
-                box-shadow: 0px 2px 17px -4px rgba(255, 255, 255, 0.54);
-                .imgArtista img {
-                    bottom: -120px;
-                }
+                box-shadow: 0px 2px 17px -4px rgba(255, 255, 255, 0.20);
             }
             &:nth-child(8){
                 display: none;
@@ -548,6 +542,9 @@ section[id] {
             }
             &.cantante:hover:after {
                 content: "Cantante";
+            }
+            &.designer:hover:after {
+                content: "Diseñador";
             }
             &:after {
                 font-family: 'Saira Condensed', sans-serif;
@@ -603,7 +600,7 @@ section[id] {
                 margin-bottom: 25px;
                 text-align: center;
                 line-height: normal;
-                font-size: 1.1em;
+                font-size: 1.3em;
                 color: #ddd;
 
                 .redsocialBtn {
@@ -613,10 +610,10 @@ section[id] {
                     margin-top: 25px;
                     // outline: green 2px solid;
                     display: flex;
-                    justify-content: space-evenly;
-                    width: 80%;
+                    width: fit-content;
                     img {
-                        width: 4em;
+                        width: 3em;
+                        margin: 0px 12px;
                     }
                 }
             }
@@ -626,7 +623,7 @@ section[id] {
             min-height: 400px;
 
             .imgArtista {
-                height: 60%;
+                height: 65%;
                 width: 100%;
                 // outline: green solid 2px;
                 overflow: hidden;
@@ -634,16 +631,19 @@ section[id] {
 
                 img{
                     width: 100%;
+                    height: 100%;
                     object-fit: cover;
                     position: absolute;
                 }
             }
             .miembroInfo {
                 width: 100%;
-                height: 40%;
+                height: 35%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                justify-content: space-around;
+
                 position: relative;
                 padding: 0px 2em;
                 margin: 0px;
@@ -661,14 +661,55 @@ section[id] {
                 }
                 div {
                     display: flex;
-                    width: 100%;
-                    justify-content: space-evenly;
+                    width: fit-content;
+                    margin-bottom: 12px;
+                    .insignia, .redsocialBtn {
+                        margin: 0px 12px;
+                    }
                 }
-                img, a{
+                img, .redsocialBtn{
                     width: 3em;
                     height: 3em;
                 }
 
+            }
+        }
+
+        .p {
+            grid-column: span 4;
+            text-align: center;
+        }
+        #exmonkisContainer {
+            grid-column: span 4;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: fit-content;
+
+            .exmonki {
+                margin: 20px 12px 12px 12px;
+                width: fit-content;
+                padding: 30px 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                outline: rgba(204, 204, 204, 0.082) solid 3px;
+
+                background-image: url("../img/miembros-textura.jpg");
+                background-position: center;
+                border-radius: 14px;
+
+                img {
+                    user-select: none;
+                    width: 14em;
+                    filter: invert(1) brightness(80%);
+                }
+                span {
+                    font-size: 2em;
+                    margin-top: 25px;
+                    color: #fff;
+                    filter: brightness(80%);
+                }
             }
         }
 
