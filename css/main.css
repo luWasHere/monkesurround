@@ -886,6 +886,14 @@ section[id] {
   filter: brightness(80%);
 }
 
+#chat {
+  margin: 10px auto 0px auto;
+  width: 95%;
+  max-width: 800px;
+  height: 70vh;
+  max-height: 600px;
+}
+
 @media (max-width: 1020px) {
   /* inicia responsive temas */
   .temasContainer #gridSp {
