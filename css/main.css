@@ -516,6 +516,7 @@ section[id] {
 }
 #formContacto form {
   width: 80%;
+  max-width: 1050px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
@@ -598,6 +599,7 @@ section[id] {
   display: grid;
   grid-template-columns: auto auto auto;
   width: 50%;
+  max-width: 900px;
   justify-content: center;
   align-items: center;
   gap: 20px;
