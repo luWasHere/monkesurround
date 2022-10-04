@@ -655,7 +655,7 @@ section[id] {
   grid-template-rows: auto;
   justify-content: center;
   justify-items: center;
-  gap: 15px;
+  gap: 10px 30px;
   width: 90%;
   max-width: 1000px;
   margin: auto;
@@ -681,6 +681,34 @@ section[id] {
   overflow: hidden;
   margin: 0px 0px 40px 0px;
   box-shadow: 0px 2px 17px -4px rgba(245, 175, 0, 0.54);
+}
+#miembrosContainer .miembro:nth-child(5) {
+  box-shadow: 0px 2px 17px -4px rgba(245, 0, 0, 0.54);
+  grid-row: span 2;
+}
+#miembrosContainer .miembro:nth-child(5) figcaption {
+  color: rgb(245, 0, 0);
+}
+#miembrosContainer .miembro:nth-child(5) .miembroInfo {
+  justify-content: flex-start;
+}
+#miembrosContainer .miembro:nth-child(6) {
+  box-shadow: 0px 2px 17px -4px rgba(0, 89, 255, 0.54);
+}
+#miembrosContainer .miembro:nth-child(6) figcaption {
+  color: rgb(33, 88, 189);
+}
+#miembrosContainer .miembro:nth-child(6) .imgArtista img {
+  bottom: -120px;
+}
+#miembrosContainer .miembro:nth-child(7) {
+  box-shadow: 0px 2px 17px -4px rgba(255, 255, 255, 0.54);
+}
+#miembrosContainer .miembro:nth-child(7) .imgArtista img {
+  bottom: -120px;
+}
+#miembrosContainer .miembro:nth-child(8) {
+  display: none;
 }
 #miembrosContainer .insignia {
   filter: brightness(80%);
@@ -719,19 +747,6 @@ section[id] {
 }
 #miembrosContainer .redsocialBtn img {
   width: 100%;
-}
-#miembrosContainer .miembroPrinc:nth-child(2), #miembrosContainer .miembroPrinc:nth-child(5) {
-  justify-self: start;
-}
-#miembrosContainer .miembroPrinc:nth-child(3) {
-  justify-self: end;
-}
-#miembrosContainer .miembroPrinc:nth-child(5) {
-  box-shadow: 0px 2px 17px -4px rgba(245, 0, 0, 0.54);
-  grid-row: span 2;
-}
-#miembrosContainer .miembroPrinc:nth-child(5) figcaption {
-  color: rgb(245, 0, 0);
 }
 #miembrosContainer .miembroPrinc figcaption {
   font-size: 2em;
@@ -775,6 +790,7 @@ section[id] {
 }
 #miembrosContainer .miembroSec {
   height: auto;
+  min-height: 400px;
 }
 #miembrosContainer .miembroSec .imgArtista {
   height: 60%;
@@ -787,7 +803,6 @@ section[id] {
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
-  outline: yellow 2px solid;
 }
 #miembrosContainer .miembroSec .miembroInfo {
   width: 100%;
@@ -806,12 +821,11 @@ section[id] {
 #miembrosContainer .miembroSec .miembroInfo figcaption {
   font-size: 2.5em;
   text-shadow: 0px 0px 12px rgb(0, 0, 0);
-  margin: 10px 0px;
+  margin: 15px 0px;
   padding: 0;
   justify-self: flex-start;
 }
 #miembrosContainer .miembroSec .miembroInfo div {
-  margin-top: 10px;
   display: flex;
   width: 100%;
   justify-content: space-evenly;
