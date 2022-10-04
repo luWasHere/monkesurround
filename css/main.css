@@ -468,6 +468,10 @@ section[id] {
   font-weight: 100;
   text-shadow: 0px 10px 30px rgba(0, 0, 0, 0.292);
 }
+.headerBanner h1 {
+  font-size: unset;
+  font-weight: normal;
+}
 
 #tarjetasContainer {
   display: flex;
@@ -613,9 +617,6 @@ section[id] {
   left: 0;
   display: none;
 }
-.temasContainer #gridYt #reproductor iframe[id] {
-  border: green 2px solid;
-}
 .temasContainer #gridYt #reproductor iframe:first-child {
   display: block;
 }
@@ -646,6 +647,131 @@ section[id] {
   align-items: center;
   justify-content: center;
   outline: green 2px solid;
+}
+
+#miembrosContainer {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
+  justify-items: center;
+  gap: 15px;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}
+#miembrosContainer .miembrosRotulo {
+  grid-column: 1/5;
+  margin: 50px auto 30px auto;
+  width: 50%;
+  max-width: 600px;
+}
+#miembrosContainer .miembro {
+  background-image: url("../img/miembros-textura.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#miembrosContainer .insignia {
+  filter: brightness(80%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#miembrosContainer .insignia:hover > img {
+  filter: brightness(30%);
+}
+#miembrosContainer .insignia.beatmaker:hover:after {
+  content: "Beatmaker";
+}
+#miembrosContainer .insignia.artista:hover:after {
+  content: "Artista";
+}
+#miembrosContainer .insignia:after {
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 1em;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.534);
+  padding: 5px;
+  border-radius: 5px;
+  outline: var(--white-1) 2px solid;
+}
+#miembrosContainer .redsocialBtn {
+  width: 2.6em;
+  height: 2.6em;
+  border-radius: 10px;
+  overflow: hidden;
+  filter: brightness(80%);
+}
+#miembrosContainer .redsocialBtn:hover {
+  filter: brightness(100%);
+  transition: all 0.4s;
+}
+#miembrosContainer .redsocialBtn img {
+  width: 100%;
+}
+#miembrosContainer .miembroPrinc {
+  grid-column: span 2;
+  width: 95%;
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 15px 0px 40px 0px;
+  box-shadow: 0px 2px 17px -4px rgba(245, 175, 0, 0.54);
+}
+#miembrosContainer .miembroPrinc:nth-child(2), #miembrosContainer .miembroPrinc:nth-child(5) {
+  justify-self: start;
+}
+#miembrosContainer .miembroPrinc:nth-child(3) {
+  justify-self: end;
+}
+#miembrosContainer .miembroPrinc:nth-child(5) {
+  box-shadow: 0px 2px 17px -4px rgba(245, 0, 0, 0.54);
+}
+#miembrosContainer .miembroPrinc:nth-child(5) figcaption {
+  color: rgb(245, 0, 0);
+}
+#miembrosContainer .miembroPrinc figcaption {
+  font-size: 2em;
+  color: var(--main-yellow);
+  position: relative;
+  bottom: 2%;
+  transform: scale(180%);
+  text-shadow: 0px 0px 12px rgb(0, 0, 0);
+  margin: 0;
+  padding: 0;
+}
+#miembrosContainer .miembroPrinc img {
+  width: 100%;
+}
+#miembrosContainer .miembroPrinc .miembroInfo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 0px 2em;
+  margin-bottom: 25px;
+  text-align: center;
+  line-height: normal;
+  font-size: 1.1em;
+  color: #ddd;
+}
+#miembrosContainer .miembroPrinc .miembroInfo .redsocialBtn {
+  margin-bottom: 20px;
+}
+#miembrosContainer .miembroPrinc .miembroInfo div {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+}
+#miembrosContainer .miembroPrinc .miembroInfo div img {
+  width: 4em;
 }
 
 @media (max-width: 1020px) {
