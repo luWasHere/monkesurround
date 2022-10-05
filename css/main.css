@@ -360,7 +360,7 @@ section[id] {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  width: 50%;
+  width: 40%;
   margin: 20px 0px 30px 0px;
   padding: 0;
 }
@@ -370,7 +370,7 @@ section[id] {
 }
 #quienesSomos ul li a img {
   border-radius: 12px;
-  width: 8vw;
+  width: 4vw;
   max-width: 90px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -886,12 +886,139 @@ section[id] {
   filter: brightness(80%);
 }
 
-#chat {
-  margin: 10px auto 0px auto;
+.tiendaContainer {
+  margin: 40px 0px 80px 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.tiendaContainer .tiendaInfo {
+  display: flex;
   width: 95%;
-  max-width: 800px;
-  height: 70vh;
-  max-height: 600px;
+  max-width: 1200px;
+}
+.tiendaContainer .tiendaInfo .text {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  padding-right: 20px;
+  background: linear-gradient(to left, rgba(232, 69, 68, 0.04), transparent);
+}
+.tiendaContainer .tiendaInfo .text .p {
+  text-align: right;
+}
+.tiendaContainer .tiendaInfo .text .titleh1 {
+  margin: 0;
+  text-align: right;
+  color: rgb(226, 38, 38);
+}
+.tiendaContainer .tiendaInfo .text .botones {
+  margin-top: 20px;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.tiendaContainer .tiendaInfo .text .botones a {
+  background: rgb(232, 69, 68);
+  color: var(--black-1);
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin: 0px 10px;
+  filter: brightness(70%);
+}
+.tiendaContainer .tiendaInfo .text .botones a:nth-child(2) {
+  margin-right: 0px;
+}
+.tiendaContainer .tiendaInfo .text .botones a:hover {
+  filter: brightness(100%);
+  transition: all 0.2s;
+}
+.tiendaContainer .tiendaInfo .text .botones a i {
+  margin-right: 5px;
+}
+.tiendaContainer .tiendaInfo .multimedia {
+  width: 40%;
+}
+.tiendaContainer .tiendaInfo .multimedia .iframeContainer {
+  display: block;
+  position: relative;
+  padding-top: 56.25%;
+}
+.tiendaContainer .tiendaInfo .multimedia .iframeContainer iframe {
+  border-radius: 0px 12px 12px 0px;
+  box-shadow: 0px 2px 20px -4px rgba(232, 69, 68, 0.2);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.tiendaContainer:nth-child(2) .tiendaInfo {
+  flex-direction: row-reverse;
+}
+.tiendaContainer:nth-child(2) .tiendaInfo .text {
+  align-items: start;
+  padding-left: 20px;
+  padding-right: 0px;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background: linear-gradient(to right, rgba(117, 44, 172, 0.04), transparent);
+}
+.tiendaContainer:nth-child(2) .tiendaInfo .text .titleh1, .tiendaContainer:nth-child(2) .tiendaInfo .text .p {
+  text-align: left;
+}
+.tiendaContainer:nth-child(2) .tiendaInfo .text .titleh1 {
+  color: rgb(117, 44, 172);
+}
+.tiendaContainer:nth-child(2) .tiendaInfo .text .botones a {
+  margin: 0;
+  background-color: rgb(117, 44, 172);
+}
+.tiendaContainer:nth-child(2) .tiendaInfo .multimedia {
+  box-shadow: 0px 2px 20px -4px rgba(163, 46, 252, 0.2);
+  position: relative;
+}
+.tiendaContainer:nth-child(2) .tiendaInfo .multimedia .position {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  transform: translate(-100%, -100%);
+}
+.tiendaContainer:nth-child(2) .tiendaInfo .multimedia .slider {
+  background-image: url("../img/tienda-design2.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px 0px 0px 12px;
+  -webkit-animation: slider 10s infinite;
+          animation: slider 10s infinite;
+}
+@-webkit-keyframes slider {
+  33% {
+    background-image: url("../img/tienda-design.jpg");
+  }
+  66% {
+    background-image: url("../img/tienda-design3.jpg");
+  }
+  100% {
+    background-image: url("../img/tienda-design2.jpg");
+  }
+}
+@keyframes slider {
+  33% {
+    background-image: url("../img/tienda-design.jpg");
+  }
+  66% {
+    background-image: url("../img/tienda-design3.jpg");
+  }
+  100% {
+    background-image: url("../img/tienda-design2.jpg");
+  }
 }
 
 @media (max-width: 1020px) {

@@ -142,7 +142,7 @@ section[id] {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
-            width: 50%;
+            width: 40%;
             margin: 20px 0px 30px 0px;
             padding: 0;
 
@@ -152,7 +152,7 @@ section[id] {
             }
             li a img {
                 border-radius: 12px;
-                width: 8vw;
+                width: 4vw;
                 max-width: 90px;
                 object-fit: cover;
                 filter: brightness(80%);
@@ -722,15 +722,146 @@ section[id] {
     // Termina css para miembros
 
 
-    // Inicia css para chat
-    #chat {
-        margin: 10px auto 0px auto;
-        width: 95%;
-        max-width: 800px;
-        height: 70vh;
-        max-height: 600px;
+    // Inicia css para tienda
+    .tiendaContainer{
+        margin: 40px 0px 80px 0px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .tiendaInfo{
+            display: flex;
+            width: 95%;
+            max-width: 1200px;
+            
+            .text {
+                width: 60%;
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                justify-content: center;
+                padding-right: 20px;
+                background: linear-gradient(to left, rgba(232 ,69 ,68, 0.040), transparent);
+
+                .p {
+                    text-align: right;
+                }
+                .titleh1 {
+                    margin: 0;
+                    text-align: right;
+                    color: rgb(226, 38, 38);
+                }
+                .botones {
+                    margin-top: 20px;
+                    display: flex;
+                    width: fit-content;
+
+                    a {
+                        background: rgb(232, 69, 68);
+                        color: var(--black-1);
+                        font-weight: 600;
+                        padding: 5px 10px;
+                        border-radius: 8px;
+                        margin: 0px 10px;
+                        filter: brightness(70%);
+
+                        &:nth-child(2) {
+                            margin-right: 0px;
+                        }
+
+                        &:hover {
+                            filter: brightness(100%);
+                            transition: all .2s;
+                        }
+                        i {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+
+                // border: blue solid 2px;
+            }
+            .multimedia {
+                width: 40%;
+                // border: violet solid 2px;
+
+                .iframeContainer {
+                    display: block;
+                    position: relative;
+                    padding-top: 56.25%;
+
+                    iframe {
+                        border-radius: 0px 12px 12px 0px;
+                        box-shadow: 0px 2px 20px -4px rgba(232, 69, 68,0.20);
+                        height: 100%;
+                        width: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+                
+            }
+        }
+        &:nth-child(2) {
+            .tiendaInfo {
+                flex-direction: row-reverse;
+
+                .text {
+                    align-items: start;
+                    padding-left: 20px;
+                    padding-right: 0px;
+                    padding-top: 90px;
+                    padding-bottom: 90px;
+                    background: linear-gradient(to right, rgba(117, 44, 172, 0.040), transparent);
+
+                    .titleh1, .p {
+                        text-align: left;
+                    }
+                    .titleh1 {
+                        color: rgb(117, 44, 172);
+                    }
+                    .botones {
+                        a {
+                            margin: 0;
+                            background-color: rgb(117, 44, 172);
+                        }
+                    }
+                }
+                .multimedia {
+                    box-shadow: 0px 2px 20px -4px rgba(163, 46, 252, 0.2);
+                    position: relative;
+                    .position {
+                        position: absolute;
+                        top: 100%;
+                        left: 100%;
+                        transform: translate(-100%, -100%);
+                    }
+                    .slider {
+                        background-image: url("../img/tienda-design2.jpg");
+                        background-size: cover;
+                        background-position: center;
+                        height: 100%;
+                        width: 100%;
+                        border-radius: 12px 0px 0px 12px;
+                        animation: slider 10s infinite;
+                    }
+                    @keyframes slider {
+                        33% {
+                            background-image: url("../img/tienda-design.jpg");
+                        }
+                        66% {
+                            background-image: url("../img/tienda-design3.jpg");
+                        }
+                        100% {
+                            background-image: url("../img/tienda-design2.jpg");
+                        }
+                    }
+                }
+            }
+        }
     }
-    // Termina css para chat
+    // Termina css para tienda
 
 // Inicia responsive
 
