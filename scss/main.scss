@@ -315,7 +315,7 @@ section[id] {
         
         form {
             width: 80%;
-            max-width: 1050px;
+            max-width: 900px;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 14px;
@@ -724,8 +724,9 @@ section[id] {
 
     // Inicia css para tienda
     .tiendaContainer{
-        margin: 40px 0px 80px 0px;
+        margin: 40px auto 80px auto;
         width: 100%;
+        max-width: 1500px;
         display: flex;
         justify-content: center;
 
@@ -813,23 +814,23 @@ section[id] {
                     padding-right: 0px;
                     padding-top: 90px;
                     padding-bottom: 90px;
-                    background: linear-gradient(to right, rgba(117, 44, 172, 0.040), transparent);
+                    background: linear-gradient(to right, rgba(42, 45, 250, 0.04), transparent);
 
                     .titleh1, .p {
                         text-align: left;
                     }
                     .titleh1 {
-                        color: rgb(117, 44, 172);
+                        color: rgb(65, 93, 216);
                     }
                     .botones {
                         a {
                             margin: 0;
-                            background-color: rgb(117, 44, 172);
+                            background-color: rgb(56, 102, 255);
                         }
                     }
                 }
                 .multimedia {
-                    box-shadow: 0px 2px 20px -4px rgba(163, 46, 252, 0.2);
+                    box-shadow: 0px 2px 20px -4px rgba(35, 105, 255, 0.2);
                     position: relative;
                     .position {
                         position: absolute;
@@ -961,8 +962,61 @@ section[id] {
             margin: 0px 25px;
         }
     }
-
     /* termina responsive miembros */
+
+
+    /* inicia responsive tienda */
+    .tiendaContainer {
+        width: 70%;
+        .tiendaInfo {
+            flex-direction: column-reverse !important;
+            .multimedia {
+                width: 100%;
+            }
+            .text {
+                width: 100%;
+                margin: 0;
+                padding: 0 15px;
+                align-items: center;
+                background: linear-gradient(to bottom, rgba(232 ,69 ,68, 0.040), transparent);
+
+                .p, .titleh1 {
+                    text-align: center;
+                    margin: 15px 0px 0px 0px;
+                    padding: 0;
+                }
+                .botones {
+                    a {
+                        margin: 0px 0px 12px 0px;
+                    }
+                    flex-direction: column;
+                    align-content: center;
+                }
+            }
+        }
+        &:nth-child(2) {
+            .tiendaInfo {
+                .text {
+                    align-items: center;
+                    padding: 0 15px;
+
+                    background: linear-gradient(to bottom, rgba(42, 45, 250, 0.04), transparent);
+
+                    .p, .titleh1 {
+                        text-align: center;
+                        margin: 15px 0px 0px 0px;
+                    }
+                }
+                .multimedia {
+                    height: 50vh;
+                }
+            }
+        }
+    }
+
+    /* termina responsive tienda */
+
+
 }
 
 @media (max-width:660px) {
@@ -1104,6 +1158,20 @@ section[id] {
     .titleh1 {
         font-size: 2.5em;
     }
+
+        /* inicia responsive tienda */
+        .tiendaContainer {
+            width: 95%;
+            .tiendaInfo {
+                .text {
+                    .p, a {
+                        font-size: 1.2em;
+                    }
+                }
+            }
+        }
+    
+        /* termina responsive tienda */
 }
 
 @media (max-width:430px) {
