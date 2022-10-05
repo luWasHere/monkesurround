@@ -923,7 +923,7 @@ section[id] {
   width: fit-content;
 }
 .tiendaContainer .tiendaInfo .text .botones a {
-  background: rgb(232, 69, 68);
+  background: rgb(223, 53, 53);
   color: var(--black-1);
   font-weight: 600;
   padding: 5px 10px;
@@ -1089,10 +1089,13 @@ section[id] {
     width: 70%;
   }
   .tiendaContainer .tiendaInfo {
-    flex-direction: column-reverse !important;
+    flex-direction: column-reverse;
   }
   .tiendaContainer .tiendaInfo .multimedia {
     width: 100%;
+  }
+  .tiendaContainer .tiendaInfo .multimedia .iframeContainer iframe {
+    border-radius: 0px 0px 0px 0px;
   }
   .tiendaContainer .tiendaInfo .text {
     width: 100%;
@@ -1113,6 +1116,9 @@ section[id] {
   .tiendaContainer .tiendaInfo .text .botones a {
     margin: 0px 0px 12px 0px;
   }
+  .tiendaContainer:nth-child(2) .tiendaInfo {
+    flex-direction: column-reverse;
+  }
   .tiendaContainer:nth-child(2) .tiendaInfo .text {
     align-items: center;
     padding: 0 15px;
@@ -1124,6 +1130,9 @@ section[id] {
   }
   .tiendaContainer:nth-child(2) .tiendaInfo .multimedia {
     height: 50vh;
+  }
+  .tiendaContainer:nth-child(2) .tiendaInfo .multimedia .slider {
+    border-radius: 0px 0px 0px 0px;
   }
   /* termina responsive tienda */
 }

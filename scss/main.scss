@@ -758,7 +758,7 @@ section[id] {
                     width: fit-content;
 
                     a {
-                        background: rgb(232, 69, 68);
+                        background: rgb(223, 53, 53);
                         color: var(--black-1);
                         font-weight: 600;
                         padding: 5px 10px;
@@ -969,9 +969,14 @@ section[id] {
     .tiendaContainer {
         width: 70%;
         .tiendaInfo {
-            flex-direction: column-reverse !important;
+            flex-direction: column-reverse;
             .multimedia {
                 width: 100%;
+                .iframeContainer {
+                    iframe {
+                        border-radius: 0px 0px 0px 0px;
+                    }
+                }
             }
             .text {
                 width: 100%;
@@ -996,6 +1001,7 @@ section[id] {
         }
         &:nth-child(2) {
             .tiendaInfo {
+                flex-direction: column-reverse;
                 .text {
                     align-items: center;
                     padding: 0 15px;
@@ -1009,11 +1015,14 @@ section[id] {
                 }
                 .multimedia {
                     height: 50vh;
+
+                    .slider {
+                        border-radius: 0px 0px 0px 0px;
+                    }
                 }
             }
         }
     }
-
     /* termina responsive tienda */
 
 
