@@ -1,0 +1,370 @@
+#miembrosContainer {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    justify-content: center;
+    justify-items: center;
+    gap: 10px 30px;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+
+    .miembrosRotulo {
+        grid-column: 1 / 5;
+        margin: 50px auto 30px auto;
+        width: 50%;
+        max-width: 600px;
+    }
+    .miembro {
+        background-image: url("../img/miembros-textura.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode: darken;
+        background-position: center;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        grid-column: span 2;
+        width: 95%;
+        border-radius: 14px;
+        overflow: hidden;
+        margin: 0px 0px 40px 0px;
+        box-shadow: 0px 2px 17px -4px rgba(245,175,0,0.20);
+        // -webkit-box-shadow: 0px 2px 17px -4px rgba(245,175,0,0.20);
+        // -moz-box-shadow: 0px 2px 17px -4px rgba(245,175,0,0.20);
+
+        &:nth-child(5) {
+            box-shadow: 0px 2px 17px -4px rgba(245, 0, 0, 0.20);
+            figcaption {
+                color: rgb(245, 0, 0);
+            }
+            .miembroInfo {
+                justify-content: flex-start;
+            }
+            grid-row: span 2;
+        }
+        &:nth-child(6){
+            box-shadow: 0px 2px 17px -4px rgba(0, 89, 255, 0.20);
+            figcaption {
+                color: rgb(33, 88, 189);
+            }
+        }
+        &:nth-child(7){
+            box-shadow: 0px 2px 17px -4px rgba(255, 255, 255, 0.20);
+        }
+        &:nth-child(8){
+            display: none;
+        }
+    }
+    .insignia {
+        filter: brightness(80%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover > img {
+            filter: brightness(30%);
+        }
+        &.beatmaker:hover:after {
+            content: "Beatmaker";
+        }
+        &.cantante:hover:after {
+            content: "Cantante";
+        }
+        &.designer:hover:after {
+            content: "Diseñador";
+        }
+        &:after {
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 1em;
+            position: fixed;
+            background: rgba(0, 0, 0, 0.534);
+            padding: 5px;
+            border-radius: 5px;
+            outline: $whiteOne 2px solid;
+        }
+    }
+    .redsocialBtn {
+        width: 2.6em;
+        height: 2.6em;
+        border-radius: 10px;
+        overflow: hidden;
+        filter: brightness(80%);
+
+        &:hover {
+            filter: brightness(100%);
+            transition: all .4s;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .miembroPrinc {
+
+        figcaption {
+            font-size: 2em;
+            color: $yellowMain;
+            position: relative;
+            bottom: 2%;
+            transform: scale(180%);
+            text-shadow: 0px 0px 12px rgba(0,0,0,1);
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+        .miembroInfo {
+            // outline: blue 3px solid;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            padding: 0px 2em;
+            margin-bottom: 25px;
+            text-align: center;
+            line-height: normal;
+            font-size: 1.3em;
+            color: #ddd;
+
+            .redsocialBtn {
+                margin-bottom: 20px;
+            }
+            div {
+                margin-top: 25px;
+                // outline: green 2px solid;
+                display: flex;
+                width: fit-content;
+                img {
+                    width: 3em;
+                    margin: 0px 12px;
+                }
+            }
+        }
+    }
+    .miembroSec {
+        height: auto;
+        min-height: 400px;
+
+        .imgArtista {
+            height: 65%;
+            width: 100%;
+            // outline: green solid 2px;
+            overflow: hidden;
+            position: relative;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+            }
+        }
+        .miembroInfo {
+            width: 100%;
+            height: 35%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+
+            position: relative;
+            padding: 0px 2em;
+            margin: 0px;
+            text-align: center;
+            line-height: normal;
+            font-size: 1.1em;
+            color: #ddd;
+
+            figcaption {
+                font-size: 2.5em;
+                text-shadow: 0px 0px 12px rgba(0,0,0,1);
+                margin: 15px 0px;
+                padding: 0;
+                justify-self: flex-start;
+            }
+            div {
+                display: flex;
+                width: fit-content;
+                margin-bottom: 12px;
+                .insignia, .redsocialBtn {
+                    margin: 0px 12px;
+                }
+            }
+            img, .redsocialBtn{
+                width: 3em;
+                height: 3em;
+            }
+
+        }
+    }
+
+    .p {
+        grid-column: span 4;
+        text-align: center;
+    }
+    #exmonkisContainer {
+        grid-column: span 4;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: fit-content;
+
+        .exmonki {
+            margin: 20px 12px 12px 12px;
+            width: fit-content;
+            padding: 30px 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            outline: rgba(204, 204, 204, 0.082) solid 3px;
+
+            background-image: url("../img/miembros-textura.jpg");
+            background-position: center;
+            border-radius: 90px 90px 10px 10px;
+
+            img {
+                user-select: none;
+                width: 14em;
+                padding: 15px;
+                filter: invert(1) brightness(80%);
+            }
+            span {
+                font-size: 2em;
+                margin-top: 25px;
+                color: #fff;
+                filter: brightness(80%);
+            }
+        }
+    }
+}
+
+// Inicia responsive
+
+@media (max-width:830px) {
+    #miembrosContainer {
+        width: 95%;
+        gap: 0px 15px;
+
+        .p {
+            margin: 0px 25px;
+        }
+    }
+}
+@media (max-width:660px) {
+    #miembrosContainer {
+        width: 70%;
+
+        .miembrosRotulo {
+            width: 70%;
+        }
+        .p {
+            margin: 0px;
+            font-size: 1.3em;
+        }
+        .miembro {
+            grid-column: span 4;
+        }
+        #exmonkisContainer .exmonki {
+            img {
+                width: 9em;
+            }
+            span {
+                font-size: 1.4em;
+            }
+
+        }
+    }
+}
+@media (max-width:520px) {
+
+    #miembrosContainer {
+        width: 85%;
+    }
+}
+@media (max-width:430px) {
+    #miembrosContainer {
+
+        .miembroPrinc {
+            .miembroInfo{
+                div {
+                    img {
+                        width: 2.4em;
+                    }
+                }
+            }
+        }
+        .miembroSec {
+            .miembroInfo {
+                div {
+                    .redsocialBtn {
+                        width: 2.4em;
+                        height: 2.4em;
+                        img {
+                            width: 2.4em;
+                            height: 2.4em;
+                        }
+                    }
+                    .insignia {
+                        img {
+                            width: 2.4em;
+                            height: 2.4em;
+                        }
+                    }
+                }
+            }
+        }
+        #exmonkisContainer {
+            .exmonki {
+                padding: 10px 10px;
+
+                img {
+                    width: 7em;
+                }
+                span {
+                    font-size: 1.2em;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}
+@media (max-width:340px) {
+    #miembrosContainer {
+
+        .p {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        #exmonkisContainer {
+            width: 100%;
+
+            .exmonki {
+                padding: 8px 8px;
+                margin: 10px 10px;
+                max-width: 100px;
+
+                img {
+                    width: 6em;
+                }
+                span {
+                    font-size: 1.1em;
+                    margin-top: 5px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+@media (max-width:290px) {
+    #miembrosContainer {
+        width: 95%;
+    }
+}

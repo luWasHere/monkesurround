@@ -1,0 +1,42 @@
+// colores
+
+$yellowMain: #F5AF00;
+$yellowTwo: #755400;
+
+$blackOne: #050505;
+$blackTwo: #0f0f0f;
+
+$whiteOne: #f5f5f5;
+$whiteTwo: #b0b0b0;
+
+// clases
+
+.monkefont {
+    font-family: 'monkefont';
+    font-weight: 100;
+}
+
+.mainfont {
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+.p {
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 1.5em;
+    color: $whiteOne;
+    font-weight: normal;
+    line-height: normal;
+}
+
+.titleh1 {
+    font-size: 4em;
+    color: $yellowMain;
+    font-weight: 700;
+    margin: 14px;
+}
+
+.titleh2 {
+    font-size: 2.5em;
+    color: $yellowMain;
+    font-weight: 700;
+}

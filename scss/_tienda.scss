@@ -1,0 +1,215 @@
+.tiendaContainer{
+    margin: 40px auto 80px auto;
+    width: 100%;
+    max-width: 1500px;
+    display: flex;
+    justify-content: center;
+
+    .tiendaInfo{
+        display: flex;
+        width: 95%;
+        max-width: 1200px;
+        
+        .text {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+            padding-right: 20px;
+            background: linear-gradient(to left, rgba(232 ,69 ,68, 0.040), transparent);
+
+            .p {
+                text-align: right;
+            }
+            .titleh1 {
+                margin: 0;
+                text-align: right;
+                color: rgb(226, 38, 38);
+            }
+            .botones {
+                margin-top: 20px;
+                display: flex;
+                width: fit-content;
+
+                a {
+                    background: rgb(223, 53, 53);
+                    color: $blackOne;
+                    font-weight: 600;
+                    padding: 5px 10px;
+                    border-radius: 8px;
+                    margin: 0px 10px;
+                    filter: brightness(70%);
+
+                    &:nth-child(2) {
+                        margin-right: 0px;
+                    }
+
+                    &:hover {
+                        filter: brightness(100%);
+                        transition: all .2s;
+                    }
+                    i {
+                        margin-right: 5px;
+                    }
+                }
+            }
+
+            // border: blue solid 2px;
+        }
+        .multimedia {
+            width: 40%;
+            // border: violet solid 2px;
+
+            .iframeContainer {
+                display: block;
+                position: relative;
+                padding-top: 56.25%;
+
+                iframe {
+                    border-radius: 0px 12px 12px 0px;
+                    box-shadow: 0px 2px 20px -4px rgba(232, 69, 68,0.20);
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+            
+        }
+    }
+    &:nth-child(2) {
+        .tiendaInfo {
+            flex-direction: row-reverse;
+
+            .text {
+                align-items: start;
+                padding-left: 20px;
+                padding-right: 0px;
+                padding-top: 90px;
+                padding-bottom: 90px;
+                background: linear-gradient(to right, rgba(42, 45, 250, 0.04), transparent);
+
+                .titleh1, .p {
+                    text-align: left;
+                }
+                .titleh1 {
+                    color: rgb(65, 93, 216);
+                }
+                .botones {
+                    a {
+                        margin: 0;
+                        background-color: rgb(56, 102, 255);
+                    }
+                }
+            }
+            .multimedia {
+                box-shadow: 0px 2px 20px -4px rgba(35, 105, 255, 0.2);
+                position: relative;
+                .position {
+                    position: absolute;
+                    top: 100%;
+                    left: 100%;
+                    transform: translate(-100%, -100%);
+                }
+                .slider {
+                    background-image: url("../img/tienda-design2.jpg");
+                    background-size: cover;
+                    background-position: center;
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 12px 0px 0px 12px;
+                    animation: slider 10s infinite;
+                }
+                @keyframes slider {
+                    33% {
+                        background-image: url("../img/tienda-design.jpg");
+                    }
+                    66% {
+                        background-image: url("../img/tienda-design3.jpg");
+                    }
+                    100% {
+                        background-image: url("../img/tienda-design2.jpg");
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Inicia responsive
+
+@media (max-width:830px) {
+    .tiendaContainer {
+        width: 70%;
+        .tiendaInfo {
+            flex-direction: column-reverse;
+            .multimedia {
+                width: 100%;
+                .iframeContainer {
+                    iframe {
+                        border-radius: 0px 0px 0px 0px;
+                    }
+                }
+            }
+            .text {
+                width: 100%;
+                margin: 0;
+                padding: 0 15px;
+                align-items: center;
+                background: linear-gradient(to bottom, rgba(232 ,69 ,68, 0.040), transparent);
+
+                .p, .titleh1 {
+                    text-align: center;
+                    margin: 15px 0px 0px 0px;
+                    padding: 0;
+                }
+                .botones {
+                    a {
+                        margin: 0px 0px 12px 0px;
+                    }
+                    flex-direction: column;
+                    align-content: center;
+                }
+            }
+        }
+        &:nth-child(2) {
+            .tiendaInfo {
+                flex-direction: column-reverse;
+                .text {
+                    align-items: center;
+                    padding: 0 15px;
+
+                    background: linear-gradient(to bottom, rgba(42, 45, 250, 0.04), transparent);
+
+                    .p, .titleh1 {
+                        text-align: center;
+                        margin: 15px 0px 0px 0px;
+                    }
+                }
+                .multimedia {
+                    height: 50vh;
+
+                    .slider {
+                        border-radius: 0px 0px 0px 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width:460px) {
+    .tiendaContainer {
+        width: 95%;
+        .tiendaInfo {
+            .text {
+                .p, a {
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
+
+}
