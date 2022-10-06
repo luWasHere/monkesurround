@@ -1,4 +1,46 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "monkefont";
+  src: url("../src/PirataOne-Regular.woff") format("truetype");
+}
+.monkefont {
+  font-family: "monkefont";
+  font-weight: 100;
+}
+
+.mainfont {
+  font-family: "Saira Condensed", sans-serif;
+}
+
+.p {
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 1.5em;
+  color: #f5f5f5;
+  font-weight: normal;
+  line-height: normal;
+}
+
+.titleh1 {
+  font-size: 4em;
+  color: #F5AF00;
+  font-weight: 700;
+  margin: 14px;
+}
+
+.titleh2 {
+  font-size: 2.5em;
+  color: #F5AF00;
+  font-weight: 700;
+}
+
+body {
+  background: linear-gradient(#050505, #0f0f0f);
+  min-height: 100vh;
+  color: #fff;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
 .monkefont {
   font-family: "monkefont";
   font-weight: 100;
@@ -270,48 +312,6 @@ footer ul li a:hover {
     margin: 4px 0px;
   }
 }
-.monkefont {
-  font-family: "monkefont";
-  font-weight: 100;
-}
-
-.mainfont {
-  font-family: "Saira Condensed", sans-serif;
-}
-
-.p {
-  font-family: "Saira Condensed", sans-serif;
-  font-size: 1.5em;
-  color: #f5f5f5;
-  font-weight: normal;
-  line-height: normal;
-}
-
-.titleh1 {
-  font-size: 4em;
-  color: #F5AF00;
-  font-weight: 700;
-  margin: 14px;
-}
-
-.titleh2 {
-  font-size: 2.5em;
-  color: #F5AF00;
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "monkefont";
-  src: url("../src/PirataOne-Regular.woff") format("truetype");
-}
-body {
-  background: linear-gradient(#050505, #0f0f0f);
-  min-height: 100vh;
-  color: #fff;
-  font-size: 16px;
-  scroll-behavior: smooth;
-}
-
 section[id] {
   scroll-margin-top: 100px;
 }
@@ -407,21 +407,21 @@ section[id] {
 #quienesSomos ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  width: 40%;
-  margin: 20px 0px 30px 0px;
+  justify-content: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 70%;
+  margin: 20px 0px 10px 0px;
   padding: 0;
-}
-#quienesSomos ul li a {
-  margin: 10px;
-  max-width: 90px;
 }
 #quienesSomos ul li a img {
   border-radius: 12px;
-  width: 4vw;
+  width: 50px;
   max-width: 90px;
   -o-object-fit: cover;
      object-fit: cover;
+  margin: 0px 16px 32px 16px;
   filter: brightness(80%);
 }
 #quienesSomos ul li a:hover img {
@@ -431,8 +431,8 @@ section[id] {
 }
 #quienesSomos #monkeImg {
   width: 20%;
-  max-width: 400px;
-  min-width: 100px;
+  max-width: 310px;
+  min-width: 200px;
   margin: 20px 0px 0px 0px;
 }
 
@@ -536,19 +536,6 @@ section[id] {
   }
 }
 @media (max-width: 660px) {
-  #quienesSomos ul {
-    justify-content: center;
-    width: 40%;
-  }
-  #quienesSomos ul li {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    width: 50%;
-  }
-  #quienesSomos ul li a img {
-    width: 12vw;
-  }
   #quienesSomos #monkeImg {
     width: 40%;
   }
@@ -565,15 +552,6 @@ section[id] {
   }
   #caracteristicas article .bgColor .caracText {
     text-align: center;
-  }
-}
-@media (max-width: 340px) {
-  #quienesSomos ul {
-    justify-content: center;
-    width: 60%;
-  }
-  #quienesSomos ul li a img {
-    width: 20vw;
   }
 }
 #tarjetasContainer {

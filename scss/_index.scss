@@ -76,20 +76,18 @@ section[id] {
     ul {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
-        width: 40%;
-        margin: 20px 0px 30px 0px;
+        justify-content: center;
+        width: fit-content;
+        max-width: 70%;
+        margin: 20px 0px 10px 0px;
         padding: 0;
 
-        li a {
-            margin: 10px;
-            max-width: 90px;
-        }
         li a img {
             border-radius: 12px;
-            width: 4vw;
+            width: 50px;
             max-width: 90px;
             object-fit: cover;
+            margin: 0px 16px 32px 16px;
             filter: brightness(80%);
         }
         li a:hover img {
@@ -100,8 +98,8 @@ section[id] {
     }
     #monkeImg {
         width: 20%;
-        max-width: 400px;
-        min-width: 100px;
+        max-width: 310px;
+        min-width: 200px;
         margin: 20px 0px 0px 0px;
     }
 }
@@ -218,21 +216,6 @@ section[id] {
     }
 }
 @media (max-width:660px) {
-    #quienesSomos ul {
-        justify-content: center;
-        width: 40%;
-    }
-
-    #quienesSomos ul li {
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        width: 50%;
-    }
-
-    #quienesSomos ul li a img {
-        width: 12vw;
-    }
 
     #quienesSomos #monkeImg {
         width: 40%;
@@ -255,14 +238,5 @@ section[id] {
 
     #caracteristicas article .bgColor .caracText {
         text-align: center;
-    }
-}
-@media (max-width:340px) {
-    #quienesSomos ul {
-        justify-content: center;
-        width: 60%;
-    }
-    #quienesSomos ul li a img {
-        width: 20vw;
     }
 }
