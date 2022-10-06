@@ -41,6 +41,39 @@ body {
   scroll-behavior: smooth;
 }
 
+.headerBanner {
+  width: 100%;
+  height: 33vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-blend-mode: darken;
+}
+.headerBanner.m {
+  background: url(../img/patronmnk-m.jpg) rgba(0, 0, 0, 0.8);
+  background-size: 5.4em;
+  background-position: center;
+}
+.headerBanner.t {
+  background: url(../img/patronmnk-t.jpg) rgba(0, 0, 0, 0.8);
+  background-size: 5.4em;
+  background-position: center;
+}
+.headerBanner.c {
+  background: url(../img/patronmnk-c.jpg) rgba(0, 0, 0, 0.8);
+  background-size: 5.4em;
+  background-position: center;
+}
+.headerBanner span {
+  color: #f5f5f5;
+  font-weight: 100;
+  text-shadow: 0px 10px 30px rgba(0, 0, 0, 0.292);
+}
+.headerBanner h1 {
+  font-size: unset;
+  font-weight: normal;
+}
+
 .monkefont {
   font-family: "monkefont";
   font-weight: 100;
@@ -499,27 +532,6 @@ section[id] {
 }
 #caracteristicas article:nth-child(3) .caracText h2 {
   color: rgb(232, 69, 68);
-}
-
-.headerBanner {
-  width: 100%;
-  height: 33vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url(../img/patronmnk.jpg) rgba(0, 0, 0, 0.8);
-  background-size: 5.4em;
-  background-position: center;
-  background-blend-mode: darken;
-}
-.headerBanner span {
-  color: #f5f5f5;
-  font-weight: 100;
-  text-shadow: 0px 10px 30px rgba(0, 0, 0, 0.292);
-}
-.headerBanner h1 {
-  font-size: unset;
-  font-weight: normal;
 }
 
 @media (max-width: 980px) {
