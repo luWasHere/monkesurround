@@ -610,10 +610,20 @@ section[id] {
   width: 80%;
   max-width: 900px;
   display: grid;
+  position: relative;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
   margin: 0;
   padding: 0;
+  margin-top: 20px;
+}
+#formContacto form:before {
+  content: "*Este formulario es una maqueta y por lo tanto no está en funcionamiento";
+  position: absolute;
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 0.9em;
+  top: -30px;
+  color: #b0b0b0;
 }
 #formContacto form input {
   border: none;
