@@ -45,6 +45,8 @@ body {
   width: 100%;
   height: 33vh;
   display: flex;
+  flex-flow: initial;
+  flex-wrap: initial;
   justify-content: center;
   align-items: center;
   background-blend-mode: darken;
@@ -74,36 +76,31 @@ body {
   font-weight: normal;
 }
 
-.monkefont {
-  font-family: "monkefont";
-  font-weight: 100;
+@media (max-width: 980px) {
+  body {
+    font-size: 14px;
+  }
 }
-
-.mainfont {
-  font-family: "Saira Condensed", sans-serif;
+@media (max-width: 660px) {
+  .titleh1 {
+    font-size: 3.2em;
+  }
 }
-
-.p {
-  font-family: "Saira Condensed", sans-serif;
-  font-size: 1.5em;
-  color: #f5f5f5;
-  font-weight: normal;
-  line-height: normal;
+@media (max-width: 460px) {
+  .titleh1 {
+    font-size: 2.5em;
+  }
 }
-
-.titleh1 {
-  font-size: 4em;
-  color: #F5AF00;
-  font-weight: 700;
-  margin: 14px;
+@media (max-width: 340px) {
+  .titleh1 {
+    font-size: 2em;
+  }
 }
-
-.titleh2 {
-  font-size: 2.5em;
-  color: #F5AF00;
-  font-weight: 700;
+@media (max-width: 290px) {
+  .titleh1 {
+    font-size: 1.5em;
+  }
 }
-
 .navBar {
   width: 100%;
   height: 85px;
@@ -113,6 +110,8 @@ body {
   z-index: 99999;
   top: 0px;
   display: flex;
+  flex-flow: initial;
+  flex-wrap: initial;
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(#050505, rgba(0, 0, 0, 0.7450980392));
@@ -121,12 +120,18 @@ body {
 }
 .navBar .logo {
   display: flex;
+  flex-flow: initial;
+  flex-wrap: initial;
+  justify-content: initial;
   align-items: center;
   flex-grow: 1.5;
   height: 100%;
 }
 .navBar .logo a {
   display: flex;
+  flex-flow: initial;
+  flex-wrap: initial;
+  justify-content: initial;
   align-items: center;
   text-decoration: none;
 }
@@ -157,7 +162,10 @@ body {
 }
 .navBar ul li a {
   display: flex;
+  flex-flow: initial;
+  flex-wrap: initial;
   justify-content: center;
+  align-items: initial;
   font-size: 1.5em;
   color: #b0b0b0;
   text-decoration: none;
@@ -172,6 +180,8 @@ body {
 .checkBtn {
   color: #b0b0b0;
   display: flex;
+  flex-flow: initial;
+  flex-wrap: initial;
   justify-content: center;
   align-items: center;
   font-size: 2em;
@@ -249,43 +259,14 @@ body {
     font-size: 2.5em;
   }
 }
-.monkefont {
-  font-family: "monkefont";
-  font-weight: 100;
-}
-
-.mainfont {
-  font-family: "Saira Condensed", sans-serif;
-}
-
-.p {
-  font-family: "Saira Condensed", sans-serif;
-  font-size: 1.5em;
-  color: #f5f5f5;
-  font-weight: normal;
-  line-height: normal;
-}
-
-.titleh1 {
-  font-size: 4em;
-  color: #F5AF00;
-  font-weight: 700;
-  margin: 14px;
-}
-
-.titleh2 {
-  font-size: 2.5em;
-  color: #F5AF00;
-  font-weight: 700;
-}
-
 footer {
   width: 100%;
   height: 30vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-flow: column;
+  flex-wrap: initial;
   justify-content: center;
+  align-items: center;
   background: linear-gradient(transparent, #050505);
   margin-top: 40px;
 }
@@ -294,7 +275,7 @@ footer img {
   width: 4em;
   margin-bottom: 15px;
 }
-footer h3 {
+footer span {
   font-size: 1.2em;
   font-weight: 500;
   color: #b0b0b0;
@@ -302,6 +283,8 @@ footer h3 {
 footer ul {
   margin: 10px 0px 20px 0px;
   display: flex;
+  flex-flow: initial;
+  flex-wrap: initial;
   justify-content: space-evenly;
   align-items: center;
   width: 25%;
@@ -427,7 +410,9 @@ section[id] {
 }
 #quienesSomos {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
+  flex-wrap: initial;
+  justify-content: initial;
   align-items: center;
 }
 #quienesSomos h1 {
@@ -439,8 +424,10 @@ section[id] {
 }
 #quienesSomos ul {
   display: flex;
+  flex-flow: initial;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: initial;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -473,8 +460,10 @@ section[id] {
   margin-top: 20px;
   width: 100%;
   display: flex;
+  flex-flow: column;
+  flex-wrap: initial;
+  justify-content: initial;
   align-items: center;
-  flex-direction: column;
 }
 #caracteristicas article {
   margin-bottom: 20px;
@@ -568,11 +557,17 @@ section[id] {
 }
 #tarjetasContainer {
   display: flex;
+  flex-flow: initial;
+  flex-wrap: initial;
   justify-content: center;
+  align-items: initial;
   margin: 60px auto 40px auto;
 }
 #tarjetasContainer .tarjetaContacto {
   display: flex;
+  flex-flow: initial;
+  flex-wrap: initial;
+  justify-content: initial;
   align-items: center;
   background: #222;
   padding: 15px 20px;
@@ -586,8 +581,10 @@ section[id] {
 }
 #tarjetasContainer .tarjetaContacto .tarjetaContactoText {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
+  flex-wrap: initial;
   justify-content: center;
+  align-items: initial;
   color: #b0b0b0;
 }
 #tarjetasContainer .tarjetaContacto span {
@@ -603,7 +600,9 @@ section[id] {
 
 #formContacto {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
+  flex-wrap: initial;
+  justify-content: initial;
   align-items: center;
 }
 #formContacto form {
@@ -658,9 +657,6 @@ section[id] {
   outline: none;
 }
 #formContacto .formBtn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   grid-column: 1/span 2;
   box-shadow: none;
   font-size: 1.2em;
@@ -719,7 +715,9 @@ section[id] {
 .temasContainer {
   margin-top: 30px;
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
+  flex-wrap: initial;
+  justify-content: initial;
   align-items: center;
 }
 .temasContainer:nth-child(2) {
@@ -792,8 +790,10 @@ section[id] {
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
+  flex-flow: initial;
+  flex-wrap: initial;
   justify-content: center;
+  align-items: center;
   outline: green 2px solid;
 }
 
@@ -870,7 +870,9 @@ section[id] {
   background-blend-mode: darken;
   background-position: center;
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
+  flex-wrap: initial;
+  justify-content: initial;
   align-items: center;
   grid-column: span 2;
   width: 95%;
@@ -904,6 +906,8 @@ section[id] {
 #miembrosContainer .insignia {
   filter: brightness(80%);
   display: flex;
+  flex-flow: initial;
+  flex-wrap: initial;
   justify-content: center;
   align-items: center;
 }
@@ -959,9 +963,10 @@ section[id] {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-flow: column;
+  flex-wrap: initial;
   justify-content: space-between;
+  align-items: center;
   position: relative;
   padding: 0px 2em;
   margin-bottom: 25px;
@@ -1005,9 +1010,10 @@ section[id] {
   width: 100%;
   height: 35%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-flow: column;
+  flex-wrap: initial;
   justify-content: space-around;
+  align-items: center;
   position: relative;
   padding: 0px 2em;
   margin: 0px;
@@ -1044,8 +1050,10 @@ section[id] {
 #miembrosContainer #exmonkisContainer {
   grid-column: span 4;
   display: flex;
-  justify-content: center;
+  flex-flow: initial;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: initial;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1057,7 +1065,9 @@ section[id] {
   width: fit-content;
   padding: 30px 15px;
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
+  flex-wrap: initial;
+  justify-content: initial;
   align-items: center;
   outline: rgba(204, 204, 204, 0.082) solid 3px;
   background-image: url("../img/miembros-textura.jpg");
@@ -1174,7 +1184,10 @@ section[id] {
   width: 100%;
   max-width: 1500px;
   display: flex;
+  flex-flow: initial;
+  flex-wrap: initial;
   justify-content: center;
+  align-items: initial;
 }
 .tiendaContainer .tiendaInfo {
   display: flex;
@@ -1184,9 +1197,10 @@ section[id] {
 .tiendaContainer .tiendaInfo .text {
   width: 60%;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  flex-flow: column;
+  flex-wrap: initial;
   justify-content: center;
+  align-items: flex-end;
   padding-right: 20px;
   background: linear-gradient(to left, rgba(232, 69, 68, 0.04), transparent);
 }
@@ -1362,30 +1376,5 @@ section[id] {
   }
   .tiendaContainer .tiendaInfo .text .p, .tiendaContainer .tiendaInfo .text a {
     font-size: 1.2em;
-  }
-}
-@media (max-width: 980px) {
-  body {
-    font-size: 14px;
-  }
-}
-@media (max-width: 660px) {
-  .titleh1 {
-    font-size: 3.2em;
-  }
-}
-@media (max-width: 460px) {
-  .titleh1 {
-    font-size: 2.5em;
-  }
-}
-@media (max-width: 340px) {
-  .titleh1 {
-    font-size: 2em;
-  }
-}
-@media (max-width: 290px) {
-  .titleh1 {
-    font-size: 1.5em;
   }
 }/*# sourceMappingURL=main.css.map */

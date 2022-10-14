@@ -1,0 +1,75 @@
+
+body {
+    background: linear-gradient($blackOne, $blackTwo);
+    min-height: 100vh;
+    color: #fff;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+.headerBanner {
+    width: 100%;
+    height: 33vh;
+    @include flex(initial, initial, center, center);
+    background-blend-mode: darken;
+
+    &.m {
+        background: url(../img/patronmnk-m.jpg) rgba(0, 0, 0, 0.8);
+        background-size: 5.4em;
+        background-position: center;
+    }
+    &.t {
+        background: url(../img/patronmnk-t.jpg) rgba(0, 0, 0, 0.8);
+        background-size: 5.4em;
+        background-position: center;
+    }
+    &.c {
+        background: url(../img/patronmnk-c.jpg) rgba(0, 0, 0, 0.8);
+        background-size: 5.4em;
+        background-position: center;
+    }
+
+    
+    span {
+        color: $whiteOne;
+        font-weight: 100;
+        text-shadow: 0px 10px 30px rgba(0, 0, 0, 0.292);
+    }
+    h1 {
+        font-size: unset;
+        font-weight: normal;
+
+    }
+}
+
+// Inicia responsive
+
+@media (max-width:980px) {
+
+    body{
+        font-size: 14px;
+    }  
+}
+@media (max-width:660px) {
+
+    .titleh1 {
+        font-size: 3.2em;
+    }
+}
+@media (max-width:460px) {
+
+    .titleh1 {
+        font-size: 2.5em;
+    }
+}
+@media (max-width:340px) {
+
+    .titleh1 {
+        font-size: 2em;
+    }
+}
+@media (max-width:290px) {
+
+    .titleh1 {
+        font-size: 1.5em;
+    }
+}

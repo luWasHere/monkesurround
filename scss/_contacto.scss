@@ -1,11 +1,9 @@
 #tarjetasContainer {
-    display: flex;
-    justify-content: center;
+    @include flex(initial, initial, center, initial);
     margin: 60px auto 40px auto;
 
     .tarjetaContacto{
-        display: flex;
-        align-items: center;
+        @include flex(initial, initial, initial, center);
         background: #222;
         padding: 15px 20px;
         border-radius: 10px;
@@ -17,9 +15,7 @@
             color: $whiteOne;
         }
         .tarjetaContactoText{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            @include flex(column, initial, center, initial);
             color: $whiteTwo;
         }
         span{
@@ -36,9 +32,8 @@
 }
 
 #formContacto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+    @include flex(column, initial, initial, center);
     
     form {
         width: 80%;
@@ -91,9 +86,6 @@
         }
     }
     .formBtn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         grid-column: 1 / span 2;
         box-shadow: none;
         font-size: 1.2em;

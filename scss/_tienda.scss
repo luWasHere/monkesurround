@@ -2,8 +2,7 @@
     margin: 40px auto 80px auto;
     width: 100%;
     max-width: 1500px;
-    display: flex;
-    justify-content: center;
+    @include flex(initial, initial, center, initial);
 
     .tiendaInfo{
         display: flex;
@@ -12,10 +11,7 @@
         
         .text {
             width: 60%;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            justify-content: center;
+            @include flex(column, initial, center, flex-end);
             padding-right: 20px;
             background: linear-gradient(to left, rgba(232 ,69 ,68, 0.040), transparent);
 

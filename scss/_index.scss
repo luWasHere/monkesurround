@@ -62,9 +62,7 @@ section[id] {
 // termina boton de scroll down
 
 #quienesSomos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex(column, initial, initial, center);
 
     h1 {
         margin: 20px 0px;
@@ -74,9 +72,7 @@ section[id] {
         text-align: center;
     }
     ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        @include flex(initial, wrap, center, initial);
         width: fit-content;
         max-width: 70%;
         margin: 20px 0px 10px 0px;
@@ -107,9 +103,7 @@ section[id] {
 #caracteristicas {
     margin-top: 20px;
     width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    @include flex(column, initial, initial, center);
 
     article {
         margin-bottom: 20px;

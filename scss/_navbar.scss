@@ -1,4 +1,3 @@
-@import "_vars";
 
 .navBar {
     width: 100%;
@@ -8,22 +7,18 @@
     z-index: 99999;
     top: 0px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex(initial, initial, space-between, center);
 
     background: linear-gradient($blackOne, #000000be);
     backdrop-filter: blur(2px);
 
-    .logo {
-        display: flex;
-        align-items: center;
+    .logo {   
+        @include flex(initial, initial, initial, center);
         flex-grow: 1.5;
         height: 100%;
 
         a {
-            display: flex;
-            align-items: center;
+            @include flex(initial, initial, initial, center);
             text-decoration: none;
         }
         img{
@@ -54,8 +49,7 @@
             transform: scale(100%);
         }
         li a {
-            display: flex;
-            justify-content: center;
+            @include flex(initial, initial, center, initial);
 
             font-size: 1.5em;
             color: $whiteTwo;
@@ -72,9 +66,7 @@
     
     .checkBtn {
         color: $whiteTwo;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex(initial, initial, center, center);
 
         font-size: 2em;
         margin-right: 12px;

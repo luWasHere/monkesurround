@@ -22,9 +22,7 @@
         background-blend-mode: darken;
         background-position: center;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex(column, initial, initial, center);
 
         grid-column: span 2;
         width: 95%;
@@ -60,9 +58,7 @@
     }
     .insignia {
         filter: brightness(80%);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex(initial, initial, center, center);
 
         &:hover > img {
             filter: brightness(30%);
@@ -121,10 +117,7 @@
             // outline: blue 3px solid;
             width: 100%;
             height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
+            @include flex(column, initial, space-between, center);
             position: relative;
             padding: 0px 2em;
             margin-bottom: 25px;
@@ -169,10 +162,7 @@
         .miembroInfo {
             width: 100%;
             height: 35%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
+            @include flex(column, initial, space-around, center);
 
             position: relative;
             padding: 0px 2em;
@@ -211,18 +201,14 @@
     }
     #exmonkisContainer {
         grid-column: span 4;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        @include flex(initial, wrap, center, initial);
         width: fit-content;
 
         .exmonki {
             margin: 20px 12px 12px 12px;
             width: fit-content;
             padding: 30px 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            @include flex(column, initial, initial, center);
             outline: rgba(204, 204, 204, 0.082) solid 3px;
 
             background-image: url("../img/miembros-textura.jpg");
