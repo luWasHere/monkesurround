@@ -45,7 +45,7 @@ body {
   width: 100%;
   height: 33vh;
   display: flex;
-  flex-flow: initial;
+  flex-direction: initial;
   flex-wrap: initial;
   justify-content: center;
   align-items: center;
@@ -110,7 +110,7 @@ body {
   z-index: 99999;
   top: 0px;
   display: flex;
-  flex-flow: initial;
+  flex-direction: initial;
   flex-wrap: initial;
   justify-content: space-between;
   align-items: center;
@@ -120,7 +120,7 @@ body {
 }
 .navBar .logo {
   display: flex;
-  flex-flow: initial;
+  flex-direction: initial;
   flex-wrap: initial;
   justify-content: initial;
   align-items: center;
@@ -129,7 +129,7 @@ body {
 }
 .navBar .logo a {
   display: flex;
-  flex-flow: initial;
+  flex-direction: initial;
   flex-wrap: initial;
   justify-content: initial;
   align-items: center;
@@ -162,7 +162,7 @@ body {
 }
 .navBar ul li a {
   display: flex;
-  flex-flow: initial;
+  flex-direction: initial;
   flex-wrap: initial;
   justify-content: center;
   align-items: initial;
@@ -180,7 +180,7 @@ body {
 .checkBtn {
   color: #b0b0b0;
   display: flex;
-  flex-flow: initial;
+  flex-direction: initial;
   flex-wrap: initial;
   justify-content: center;
   align-items: center;
@@ -263,7 +263,7 @@ footer {
   width: 100%;
   height: 30vh;
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   flex-wrap: initial;
   justify-content: center;
   align-items: center;
@@ -283,7 +283,7 @@ footer span {
 footer ul {
   margin: 10px 0px 20px 0px;
   display: flex;
-  flex-flow: initial;
+  flex-direction: initial;
   flex-wrap: initial;
   justify-content: space-evenly;
   align-items: center;
@@ -410,7 +410,7 @@ section[id] {
 }
 #quienesSomos {
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   flex-wrap: initial;
   justify-content: initial;
   align-items: center;
@@ -424,7 +424,7 @@ section[id] {
 }
 #quienesSomos ul {
   display: flex;
-  flex-flow: initial;
+  flex-direction: initial;
   flex-wrap: wrap;
   justify-content: center;
   align-items: initial;
@@ -460,7 +460,7 @@ section[id] {
   margin-top: 20px;
   width: 100%;
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   flex-wrap: initial;
   justify-content: initial;
   align-items: center;
@@ -557,7 +557,7 @@ section[id] {
 }
 #tarjetasContainer {
   display: flex;
-  flex-flow: initial;
+  flex-direction: initial;
   flex-wrap: initial;
   justify-content: center;
   align-items: initial;
@@ -565,7 +565,7 @@ section[id] {
 }
 #tarjetasContainer .tarjetaContacto {
   display: flex;
-  flex-flow: initial;
+  flex-direction: initial;
   flex-wrap: initial;
   justify-content: initial;
   align-items: center;
@@ -581,7 +581,7 @@ section[id] {
 }
 #tarjetasContainer .tarjetaContacto .tarjetaContactoText {
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   flex-wrap: initial;
   justify-content: center;
   align-items: initial;
@@ -600,7 +600,7 @@ section[id] {
 
 #formContacto {
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   flex-wrap: initial;
   justify-content: initial;
   align-items: center;
@@ -614,15 +614,6 @@ section[id] {
   gap: 14px;
   margin: 0;
   padding: 0;
-  margin-top: 20px;
-}
-#formContacto form:before {
-  content: "*Este formulario es una maqueta y por lo tanto no está en funcionamiento";
-  position: absolute;
-  font-family: "Saira Condensed", sans-serif;
-  font-size: 0.9em;
-  top: -30px;
-  color: #b0b0b0;
 }
 #formContacto form input {
   border: none;
@@ -656,15 +647,21 @@ section[id] {
 #formContacto form input:focus, #formContacto form textarea:focus {
   outline: none;
 }
-#formContacto .formBtn {
+#formContacto form a {
   grid-column: 1/span 2;
+  position: relative;
+}
+#formContacto form a .formBtn {
+  position: relative;
+  z-index: -1;
+  width: 100%;
   box-shadow: none;
   font-size: 1.2em;
   background-color: #222;
   cursor: pointer;
   padding: 12px;
 }
-#formContacto .formBtn:hover {
+#formContacto form a:hover > .formBtn {
   background-color: #333;
   transition: all 0.2s;
 }
@@ -715,7 +712,7 @@ section[id] {
 .temasContainer {
   margin-top: 30px;
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   flex-wrap: initial;
   justify-content: initial;
   align-items: center;
@@ -790,7 +787,7 @@ section[id] {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-flow: initial;
+  flex-direction: initial;
   flex-wrap: initial;
   justify-content: center;
   align-items: center;
@@ -870,7 +867,7 @@ section[id] {
   background-blend-mode: darken;
   background-position: center;
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   flex-wrap: initial;
   justify-content: initial;
   align-items: center;
@@ -906,7 +903,7 @@ section[id] {
 #miembrosContainer .insignia {
   filter: brightness(80%);
   display: flex;
-  flex-flow: initial;
+  flex-direction: initial;
   flex-wrap: initial;
   justify-content: center;
   align-items: center;
@@ -963,7 +960,7 @@ section[id] {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   flex-wrap: initial;
   justify-content: space-between;
   align-items: center;
@@ -1010,7 +1007,7 @@ section[id] {
   width: 100%;
   height: 35%;
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   flex-wrap: initial;
   justify-content: space-around;
   align-items: center;
@@ -1050,7 +1047,7 @@ section[id] {
 #miembrosContainer #exmonkisContainer {
   grid-column: span 4;
   display: flex;
-  flex-flow: initial;
+  flex-direction: initial;
   flex-wrap: wrap;
   justify-content: center;
   align-items: initial;
@@ -1065,7 +1062,7 @@ section[id] {
   width: fit-content;
   padding: 30px 15px;
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   flex-wrap: initial;
   justify-content: initial;
   align-items: center;
@@ -1184,7 +1181,7 @@ section[id] {
   width: 100%;
   max-width: 1500px;
   display: flex;
-  flex-flow: initial;
+  flex-direction: initial;
   flex-wrap: initial;
   justify-content: center;
   align-items: initial;
@@ -1197,7 +1194,7 @@ section[id] {
 .tiendaContainer .tiendaInfo .text {
   width: 60%;
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   flex-wrap: initial;
   justify-content: center;
   align-items: flex-end;
@@ -1375,6 +1372,84 @@ section[id] {
     width: 95%;
   }
   .tiendaContainer .tiendaInfo .text .p, .tiendaContainer .tiendaInfo .text a {
+    font-size: 1.2em;
+  }
+}
+#errorContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: initial;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+#errorContainer img {
+  position: absolute;
+  z-index: -1;
+  filter: brightness(25%);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#errorContainer div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: initial;
+  justify-content: initial;
+  align-items: center;
+  position: relative;
+  bottom: 85px;
+}
+#errorContainer div h1 {
+  font-size: 5em;
+  text-align: center;
+}
+#errorContainer div p {
+  font-size: 2em;
+  text-align: center;
+}
+#errorContainer div p a {
+  color: #f5f5f5;
+  -webkit-text-decoration: underline 1.8px;
+          text-decoration: underline 1.8px;
+  text-underline-offset: 2px;
+  font-weight: normal;
+}
+#errorContainer div p a:hover {
+  color: #F5AF00;
+  transition: all 0.2s;
+}
+
+@media (max-width: 780px) {
+  #errorContainer div {
+    bottom: 70px;
+  }
+}
+@media (max-width: 620px) {
+  #errorContainer div h1 {
+    font-size: 4em;
+  }
+  #errorContainer div p {
+    font-size: 1.8em;
+  }
+}
+@media (max-width: 480px) {
+  #errorContainer div h1 {
+    font-size: 3em;
+  }
+  #errorContainer div p {
+    font-size: 1.4em;
+  }
+}
+@media (max-width: 335px) {
+  #errorContainer div h1 {
+    font-size: 2.5em;
+  }
+  #errorContainer div p {
     font-size: 1.2em;
   }
 }/*# sourceMappingURL=main.css.map */
