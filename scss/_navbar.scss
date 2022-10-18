@@ -33,7 +33,6 @@
     ul {
         display: flex;
         flex-grow: 1;
-        /* padding-right: 30px; */
 
         justify-content: space-around;
         align-items: center;
@@ -42,7 +41,6 @@
 
         li#navActive a{
             color: $yellowTwo;
-            /* filter: brightness(50%); */
             cursor: default;
         }
         li#navActive:hover a{

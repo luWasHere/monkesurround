@@ -30,8 +30,6 @@
         overflow: hidden;
         margin: 0px 0px 40px 0px;
         box-shadow: 0px 2px 17px -4px rgba(245,175,0,0.20);
-        // -webkit-box-shadow: 0px 2px 17px -4px rgba(245,175,0,0.20);
-        // -moz-box-shadow: 0px 2px 17px -4px rgba(245,175,0,0.20);
 
         &:nth-child(5) {
             box-shadow: 0px 2px 17px -4px rgba(245, 0, 0, 0.20);
@@ -51,9 +49,6 @@
         }
         &:nth-child(7){
             box-shadow: 0px 2px 17px -4px rgba(255, 255, 255, 0.20);
-        }
-        &:nth-child(8){
-            display: none;
         }
     }
     .insignia {
@@ -114,7 +109,6 @@
             width: 100%;
         }
         .miembroInfo {
-            // outline: blue 3px solid;
             width: 100%;
             height: 100%;
             @include flex(column, initial, space-between, center);
@@ -131,7 +125,6 @@
             }
             div {
                 margin-top: 25px;
-                // outline: green 2px solid;
                 display: flex;
                 width: fit-content;
                 img {
@@ -148,7 +141,6 @@
         .imgArtista {
             height: 65%;
             width: 100%;
-            // outline: green solid 2px;
             overflow: hidden;
             position: relative;
 

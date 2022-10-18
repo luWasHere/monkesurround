@@ -3,8 +3,7 @@
     src: url('../src/PirataOne-Regular.woff') format('truetype');
 }
 
-@import "_vars";
-@import "_mixins";
+@import "_vars-n-mixins";
 @import "_global";
 
     @import "_navbar";

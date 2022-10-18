@@ -132,13 +132,11 @@ section[id] {
             }
             p a {
                 color: unset;
-                /* border-bottom: 2px solid $whiteOne; */
                 text-decoration: underline;
                 font-weight: normal;
             }
             p a:hover {
                 color: $yellowMain;
-                /* border-bottom: 2px solid $yellowMain; */
                 transition: all .1s;
             }
         }
